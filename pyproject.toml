@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claimcite"
+version = "0.1.0"
+description = "Offline CLI: claim↔citation coverage for Markdown/LaTeX research drafts."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Rashed Hasan" }]
+keywords = ["research", "citations", "markdown", "latex", "cli", "grad-student", "writing"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Environment :: Console",
+  "Intended Audience :: Science/Research",
+  "Topic :: Text Processing",
+]
+dependencies = []
+
+[project.scripts]
+claimcite = "claimcite.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/rashedhasan090/claimcite"
+Repository = "https://github.com/rashedhasan090/claimcite"
+
+[tool.setuptools.packages.find]
+where = ["src"]
