@@ -6,7 +6,7 @@ Grad students and paper authors often sprinkle citations near *some* claims and 
 
 ## Why this is novel
 
-Most citation tools check whether a BibTeX key *exists*. Hedging tools (e.g. hedgescope) score cautious language. **claimcite** instead measures *spatial* claim↔citation coverage in the draft itself: is there a `\\cite{}` / `[@key]` / footnote within a character window of each assertive claim?
+Most citation tools check whether a BibTeX key *exists*. Hedging tools (e.g. hedgescope) score cautious language. **claimcite** instead measures *spatial* claim↔citation coverage in the draft itself: is there a `\cite{}` / `[@key]` / footnote within a character window of each assertive claim?
 
 It is deliberately heuristic and offline (stdlib-only Python) — a triage aid, not a semantic fact-checker.
 
@@ -50,7 +50,7 @@ Covered (sample):
 ## What counts as a claim / citation
 
 - **Claims**: sentences with assertive research cues (`show`, `demonstrate`, `outperform`, `significant`, `we find`, …), skipping soft future-work hedges and bibliography/related-work sections when headed as such.
-- **Citations**: Pandoc `[@key]`, LaTeX `\\cite{…}` / `\\citep{…}` (and common biblatex aliases), Markdown footnotes `[^id]`.
+- **Citations**: Pandoc `[@key]`, LaTeX `\cite{…}` / `\citep{…}` (and common biblatex aliases), Markdown footnotes `[^id]`.
 
 ## Exit codes
 
