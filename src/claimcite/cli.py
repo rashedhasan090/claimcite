@@ -16,7 +16,7 @@ def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="claimcite",
         description=(
-            "Offline claim\u2194citation coverage for Markdown/LaTeX research drafts. "
+            "Offline claim↔citation coverage for Markdown/LaTeX research drafts. "
             "Maps assertive claim sentences to nearby citation markers."
         ),
     )
@@ -41,7 +41,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--min-coverage",
         type=float,
         default=None,
-        help="Exit 1 if coverage fraction is below this value (0\u20131).",
+        help="Exit 1 if coverage fraction is below this value (0–1).",
     )
     p.add_argument("--json", action="store_true", help="Emit machine-readable JSON.")
     p.add_argument("--version", action="version", version=f"claimcite {__version__}")
