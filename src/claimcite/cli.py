@@ -8,14 +8,15 @@ import sys
 from pathlib import Path
 
 from claimcite import __version__
-from claimcite.core import analyze, format_report
+from claimcite.core import analyze
+from claimcite.report import format_report
 
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="claimcite",
         description=(
-            "Offline claim↔citation coverage for Markdown/LaTeX research drafts. "
+            "Offline claim\u2194citation coverage for Markdown/LaTeX research drafts. "
             "Maps assertive claim sentences to nearby citation markers."
         ),
     )
@@ -40,7 +41,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--min-coverage",
         type=float,
         default=None,
-        help="Exit 1 if coverage fraction is below this value (0–1).",
+        help="Exit 1 if coverage fraction is below this value (0\u20131).",
     )
     p.add_argument("--json", action="store_true", help="Emit machine-readable JSON.")
     p.add_argument("--version", action="version", version=f"claimcite {__version__}")
